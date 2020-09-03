@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 String message = editText.getText().toString();
 
                 // Intentを作成する
-                Intent intent = new Intent(this,ResultActivity.class);
+                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
 
                 // パラメータをセットする
                 intent.putExtra("message", message);
