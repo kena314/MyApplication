@@ -13,10 +13,9 @@
         android:layout_marginStart="161dp"
         android:layout_marginLeft="161dp"
         android:layout_marginTop="309dp"
-        android:text="@string/button_send"
+        android:text="@string/start_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="スタート" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/end_button"
@@ -25,8 +24,7 @@
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
         android:layout_marginTop="408dp"
-        android:text="@string/button_send"
+        android:text="@string/end_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="終了" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
