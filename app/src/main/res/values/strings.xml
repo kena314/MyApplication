@@ -2,5 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="start_button">スタート</string>
     <string name="end_button">終了</string>
+    <string name="yes_button">はい</string>
+    <string name="no_button">いいえ</string>
+    <string name="back_button">修正する</string>
     <string name="edit_message">Enter a message</string>
 </resources>
