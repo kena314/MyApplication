@@ -5,7 +5,7 @@ package com.example.myapplication;
         import android.os.Bundle;
         import android.widget.TextView;
 
-public class ResultActivity extends AppCompatActivity {
+public class AnswerScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
