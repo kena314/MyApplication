@@ -15,7 +15,7 @@ public class ResultActivity extends AppCompatActivity {
         String message = getIntent().getStringExtra("message");
 
         // TextViewへの参照を取得する
-        TextView textView = findViewById(R.id.textView);
+        TextView textView = findViewById(R.id.question_text);
 
         // TextViewにテキストを設定する
         textView.setText(message);

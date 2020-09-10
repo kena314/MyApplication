@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button button = findViewById(R.id.button);
+        Button button = findViewById(R.id.start_button);
         // ボタンタップ時の処理を指定する
         button.setOnClickListener(new View.OnClickListener() {
             @Override
