@@ -7,13 +7,13 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/agree_button2"
+        android:id="@+id/rejected_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginLeft="204dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
         android:layout_marginTop="132dp"
-        android:text="@string/yes_button"
+        android:text="@string/no_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
