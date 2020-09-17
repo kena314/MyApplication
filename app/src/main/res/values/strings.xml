@@ -9,4 +9,6 @@
     <string name="mind_message">あなたが思い浮かべているのは・・・</string>
     <string name="correct_message">エサクタ</string>
     <string name="move_title_button">タイトルへ</string>
+    <string name="continue_check_message">つづけます？？？？？？？？？？</string>
+    <string name="continue_message">つづける！！！</string>
 </resources>
