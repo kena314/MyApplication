@@ -29,5 +29,14 @@ public class StartScreenActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 終了ボタン処理
+        endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // アプリ終了
+                moveTaskToBack (true);
+            }
+        });
     }
 }
