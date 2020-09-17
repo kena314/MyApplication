@@ -6,4 +6,5 @@
     <string name="no_button">いいえ</string>
     <string name="back_button">修正する</string>
     <string name="edit_message">Enter a message</string>
+    <string name="mind_message">あなたが思い浮かべているのは・・・</string>
 </resources>
