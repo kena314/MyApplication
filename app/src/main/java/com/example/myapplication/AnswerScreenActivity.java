@@ -8,7 +8,16 @@ package com.example.myapplication;
         import android.widget.Button;
         import android.widget.TextView;
 
+        import com.example.myapplication.test.AnswerPoint;
+
 public class AnswerScreenActivity extends AppCompatActivity {
+
+    // インスタンス作成
+    AnswerPoint answerPoint = new AnswerPoint();
+    // 質問回数
+    int questionCount = 1;
+    // 回答回数
+    int answerCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +43,14 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
                 if (message.equals("ぶんぶんしますか？")) {
+                    // パラメーター設定
+                    answerPoint.setCooking_jun(10);
+                }
+                answerCount++;
+                if (questionCount == answerCount){
                     // 画面を遷移させる
                     startActivity(intent);
                 }
-
             }
         });
     }
