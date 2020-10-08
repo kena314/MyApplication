@@ -8,6 +8,7 @@ package com.example.myapplication;
         import android.widget.Button;
         import android.widget.TextView;
 
+        import com.example.myapplication.Enum.QuestionType;
         import com.example.myapplication.test.AnswerPoint;
 
 public class AnswerScreenActivity extends AppCompatActivity {
@@ -27,13 +28,13 @@ public class AnswerScreenActivity extends AppCompatActivity {
         Button yesButton = findViewById(R.id.yes_button);
 
         //String message = getIntent().getStringExtra("message");
-        String message = "ぶんぶんしますか？";
+        QuestionType message = QuestionType.BUNBUN;
 
         // TextViewへの参照を取得する
         TextView textView = findViewById(R.id.question_text);
 
         // TextViewにテキストを設定する
-        textView.setText(message);
+        textView.setText(message.getQuestion());
 
         // 「はい」ボタン処理
         yesButton.setOnClickListener(new View.OnClickListener() {
@@ -42,10 +43,9 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 // Intentを作成する
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
-                if (message.equals("ぶんぶんしますか？")) {
-                    // パラメーター設定
-                    answerPoint.setCooking_jun(10);
-                }
+                // パラメーター設定
+                answerPoint.setCooking_jun(message.getCookingPoint());
+                answerPoint.setEmotionLess_jun(message.getEmotionLessPoint());
                 answerCount++;
                 if (questionCount == answerCount){
                     // 画面を遷移させる
