@@ -33,11 +33,11 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 // Intentを作成する
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
-                if (message.equals("ぶんぶんしますか？ "))
+                if (message.equals("ぶんぶんしますか？ ")) {
 
                     // 画面を遷移させる
-                startActivity(intent);
-
+                    startActivity(intent);
+                }
             }
         });
     }
