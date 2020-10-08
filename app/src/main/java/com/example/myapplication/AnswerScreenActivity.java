@@ -18,7 +18,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
         Button yesButton = findViewById(R.id.yes_button);
 
         //String message = getIntent().getStringExtra("message");
-        String message = "ぶんぶんしますか？ ";
+        String message = "ぶんぶんしますか？";
 
         // TextViewへの参照を取得する
         TextView textView = findViewById(R.id.question_text);
@@ -33,10 +33,10 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 // Intentを作成する
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
-                if (message.equals("ぶんぶんしますか？ "))
-
+                if (message.equals("ぶんぶんしますか？")) {
                     // 画面を遷移させる
-                startActivity(intent);
+                    startActivity(intent);
+                }
 
             }
         });
