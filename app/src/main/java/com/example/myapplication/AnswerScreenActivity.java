@@ -31,7 +31,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
         Button yesButton = findViewById(R.id.yes_button);
 
         //String message = getIntent().getStringExtra("message");
-        QuestionType message = QuestionType.BUNBUN;
+        QuestionType message = generateRandomQuestion();
 
         // TextViewへの参照を取得する
         TextView textView = findViewById(R.id.question_text);
@@ -50,6 +50,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 answerPoint.setCooking_jun(message.getCookingPoint());
                 answerPoint.setEmotionLess_jun(message.getEmotionLessPoint());
                 answerCount++;
+                changeMessage(message);
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     startActivity(intent);
@@ -60,7 +61,6 @@ public class AnswerScreenActivity extends AppCompatActivity {
     //
     private QuestionType generateRandomQuestion(){
       Random r = new Random();
-
-
+      return QuestionType.toQuestionNo(r.nextInt(10));
     }
 }

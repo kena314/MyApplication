@@ -38,7 +38,7 @@ public enum QuestionType {
 
     public String getQuestion(){ return this.question; }
 
-    public QuestionType toQuestionNo(int questionNo){
+    public static QuestionType toQuestionNo(int questionNo){
         return Arrays.stream(QuestionType.values()).filter(it->it.questionNo == questionNo).findFirst().orElse(null);
     }
 
