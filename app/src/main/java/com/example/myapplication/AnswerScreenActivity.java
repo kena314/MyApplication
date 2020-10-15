@@ -59,6 +59,8 @@ public class AnswerScreenActivity extends AppCompatActivity {
     }
     //
     private QuestionType generateRandomQuestion(){
+      Random r = new Random();
+
 
     }
 }

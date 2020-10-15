@@ -1,32 +1,32 @@
 package com.example.myapplication.Enum;
 
-public enum QuestionType {
-    BUNBUN("ぶんぶんしますか？", 0,10, 0),
-    EMOTION_LESS("感情を失いましたか？", 1,0, 10),
-    FUTURE_HOPE("将来を期待されていますか?", 2,0, 10),
-    BLACK_POOP("ウンコが黒いですか?", 3,0, 10),
-    ECSTASY("昇天してる？", 4,0, 10),
-    CLANNAD_LIFE("クラナドは人生?", 5,0, 10),
-    OHTANI("球速165km/sを投げますか?", 6,0, 10),
-    WOMAN_GORORI("女性ですか？", 7,0, 10),
-    MOKOU("勇気の切断", 8,0, 10),
-    GORORI("教育番組に出ていますか？", 9,0, 10);
+import java.util.Arrays;
 
-    private String question;
+public enum QuestionType {
+    BUNBUN(      0,10, 0, "ぶんぶんしますか？"),
+    EMOTION_LESS(1,0, 10, "感情を失いましたか？"),
+    FUTURE_HOPE( 2,0, 10, "将来を期待されていますか?"),
+    BLACK_POOP(  3,0, 10, "ウンコが黒いですか?"),
+    ECSTASY(     4,0, 10, "昇天してる？"),
+    CLANNAD_LIFE(5,0, 10, "クラナドは人生?"),
+    OHTANI(      6,0, 10, "球速165km/sを投げますか?"),
+    WOMAN_GORORI(7,0, 10, "女性ですか？"),
+    MOKOU(       8,0, 10, "勇気の切断"),
+    GORORI(      9,0, 10, "教育番組に出ていますか？");
+
     private int questionNo;
     private int cookingPoint;
     private int emotionLessPoint;
+    private String question;
 
-    private QuestionType(String question, int questionNo, int cookingPoint, int emotionLessPoint) {
-        this.question = question;
+    private QuestionType(int questionNo, int cookingPoint, int emotionLessPoint, String question) {
         this.questionNo = questionNo;
         this.cookingPoint = cookingPoint;
         this.emotionLessPoint = emotionLessPoint;
+        this.question = question;
     }
 
-    public String getQuestion(){
-        return this.question;
-    }
+    public int getQuestionNo(){ return this.questionNo; }
 
     public int getCookingPoint(){
         return this.cookingPoint;
@@ -36,5 +36,10 @@ public enum QuestionType {
         return this.emotionLessPoint;
     }
 
-    
+    public String getQuestion(){ return this.question; }
+
+    public QuestionType toQuestionNo(int questionNo){
+        return Arrays.stream(QuestionType.values()).filter(it->it.questionNo == questionNo).findFirst().orElse(null);
+    }
+
 }
