@@ -11,12 +11,15 @@ package com.example.myapplication;
         import com.example.myapplication.Enum.QuestionType;
         import com.example.myapplication.test.AnswerPoint;
 
+        import java.util.Random;
+
 public class AnswerScreenActivity extends AppCompatActivity {
 
     // インスタンス作成
     AnswerPoint answerPoint = new AnswerPoint();
     // 質問回数
-    int questionCount = 1;
+    Random rnd = new Random();
+    Integer questionCount = 11 + rnd.nextInt(10);
     // 回答回数
     int answerCount = 0;
 
