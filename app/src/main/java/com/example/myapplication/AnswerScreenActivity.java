@@ -10,6 +10,7 @@ package com.example.myapplication;
 
         import com.example.myapplication.Enum.QuestionType;
         import com.example.myapplication.test.AnswerPoint;
+        import com.example.myapplication.test.QuestionData;
 
         import java.util.Random;
 
@@ -30,14 +31,13 @@ public class AnswerScreenActivity extends AppCompatActivity {
 
         Button yesButton = findViewById(R.id.yes_button);
 
-        //String message = getIntent().getStringExtra("message");
-        QuestionData message = generateRandomQuestion();
+        QuestionData message = new QuestionData(generateRandomQuestion());
 
         // TextViewへの参照を取得する
         TextView textView = findViewById(R.id.question_text);
 
         // TextViewにテキストを設定する
-        textView.setText(message.getQuestion());
+        textView.setText(message.getQuestionType().getQuestion());
 
         // 「はい」ボタン処理
         yesButton.setOnClickListener(new View.OnClickListener() {
@@ -47,11 +47,10 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
                 // パラメーター設定
-                answerPoint.setCooking_jun(message.getCookingPoint());
-                answerPoint.setEmotionLess_jun(message.getEmotionLessPoint());
+                answerPoint.setCooking_jun(message.getQuestionType().getCookingPoint());
+                answerPoint.setEmotionLess_jun(message.getQuestionType().getEmotionLessPoint());
                 answerCount++;
-                //changeMessage(message);
-                //message = generateRandomQuestion();
+                message.setQuestionType(generateRandomQuestion());
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     startActivity(intent);
