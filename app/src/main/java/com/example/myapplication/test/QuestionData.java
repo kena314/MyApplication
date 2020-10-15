@@ -4,6 +4,7 @@ import com.example.myapplication.Enum.QuestionType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor

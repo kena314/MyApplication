@@ -51,6 +51,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 answerPoint.setEmotionLess_jun(message.getQuestionType().getEmotionLessPoint());
                 answerCount++;
                 message.setQuestionType(generateRandomQuestion());
+                textView.setText(message.getQuestionType().getQuestion());
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     startActivity(intent);

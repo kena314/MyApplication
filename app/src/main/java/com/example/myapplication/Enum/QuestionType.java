@@ -11,7 +11,7 @@ public enum QuestionType {
     CLANNAD_LIFE(5,0, 10, "クラナドは人生?"),
     OHTANI(      6,0, 10, "球速165km/sを投げますか?"),
     WOMAN_GORORI(7,0, 10, "女性ですか？"),
-    MOKOU(       8,0, 10, "勇気の切断"),
+    MOKOU(       8,0, 10, "勇気の切断？"),
     GORORI(      9,0, 10, "教育番組に出ていますか？");
 
     private int questionNo;
