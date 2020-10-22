@@ -9,8 +9,8 @@ package com.example.myapplication;
         import android.widget.TextView;
 
         import com.example.myapplication.Enum.QuestionType;
-        import com.example.myapplication.test.AnswerPoint;
-        import com.example.myapplication.test.QuestionData;
+        import com.example.myapplication.Data.AnswerPoint;
+        import com.example.myapplication.Data.QuestionData;
 
         import java.util.Random;
 

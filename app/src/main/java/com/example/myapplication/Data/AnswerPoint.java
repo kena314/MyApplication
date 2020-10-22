@@ -1,4 +1,4 @@
-package com.example.myapplication.test;
+package com.example.myapplication.Data;
 
 public class AnswerPoint {
     //料理王純一
