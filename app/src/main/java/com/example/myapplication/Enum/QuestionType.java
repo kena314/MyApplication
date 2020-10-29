@@ -58,10 +58,10 @@ public enum QuestionType {
     private int questionNo;
     private int cookingPoint;
     private int emotionLessPoint;
-    private int futurePoint;
-    private int blackPoint;
-    private int ecstasyPoint;
-    private int clannadPoint;
+    private int godChildPoint;
+    private int highSchoolPoint;
+    private int sanFranciscoPoint;
+    private int cryPoint;
     private int ohtaniPoint;
     private int womanGororiPoint;
     private int mokouPoint;
