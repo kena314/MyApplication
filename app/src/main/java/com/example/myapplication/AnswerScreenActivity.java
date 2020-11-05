@@ -48,13 +48,6 @@ public class AnswerScreenActivity extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resultPointView.setText(String.format(Locale.US,
-                        "料理王=%d,無感情=%d,神童=%d\n高校生=%d,サンフランシスコ=%d,号泣=%d\n大谷=%d,元カノゴロリ=%d,もこう=%d,ガチゴロリ=%d\n",
-                        answerPoint.getCooking_jun(),answerPoint.getEmotionLess_jun(),answerPoint.getGodChild_jun(),
-                        answerPoint.getHighSchool_jun(),answerPoint.getSanFrancisco_jun(),answerPoint.getCry_jun(),
-                        answerPoint.getOhtani_jun(),answerPoint.getWomanGorori(),answerPoint.getMokou(),
-                        answerPoint.getGorori()));
-
                 // Intentを作成する
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
@@ -69,6 +62,13 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 answerPoint.setWomanGorori(message.getQuestionType().getWomanGororiPoint());
                 answerPoint.setMokou(message.getQuestionType().getMokouPoint());
                 answerPoint.setGorori(message.getQuestionType().getGororiPoint());
+
+                resultPointView.setText(String.format(Locale.US,
+                        "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
+                        answerPoint.getCooking_jun(),answerPoint.getEmotionLess_jun(),answerPoint.getGodChild_jun(),
+                        answerPoint.getHighSchool_jun(),answerPoint.getSanFrancisco_jun(),answerPoint.getCry_jun(),
+                        answerPoint.getOhtani_jun(),answerPoint.getWomanGorori(),answerPoint.getMokou(),
+                        answerPoint.getGorori()));
 
                 answerCount++;
                 message.setQuestionType(generateRandomQuestion());
