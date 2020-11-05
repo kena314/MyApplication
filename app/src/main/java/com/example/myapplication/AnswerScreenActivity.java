@@ -32,6 +32,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question_screen);
 
         Button yesButton = findViewById(R.id.yes_button);
+        Button noButton = findViewById(R.id.no_button);
 
         QuestionData message = new QuestionData(generateRandomQuestion());
 
@@ -48,9 +49,6 @@ public class AnswerScreenActivity extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intentを作成する
-                Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
-
                 // パラメーター設定
 //                answerPoint.setCooking_jun(message.getQuestionType().getCookingPoint());
 //                answerPoint.setEmotionLess_jun(message.getQuestionType().getEmotionLessPoint());
@@ -86,6 +84,22 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 textView.setText(message.getQuestionType().getQuestion());
                 if (questionCount == answerCount){
                     // 画面を遷移させる
+                    Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        // 「いいえ」ボタン処理
+        noButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answerCount++;
+                message.setQuestionType(generateRandomQuestion());
+                textView.setText(message.getQuestionType().getQuestion());
+                if (questionCount == answerCount){
+                    // 画面を遷移させる
+                    Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
                     startActivity(intent);
                 }
             }
