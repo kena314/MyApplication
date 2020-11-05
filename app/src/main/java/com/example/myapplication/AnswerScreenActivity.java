@@ -52,16 +52,27 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
 
                 // パラメーター設定
-                answerPoint.setCooking_jun(message.getQuestionType().getCookingPoint());
-                answerPoint.setEmotionLess_jun(message.getQuestionType().getEmotionLessPoint());
-                answerPoint.setGodChild_jun(message.getQuestionType().getGodChildPoint());
-                answerPoint.setHighSchool_jun(message.getQuestionType().getHighSchoolPoint());
-                answerPoint.setSanFrancisco_jun(message.getQuestionType().getSanFranciscoPoint());
-                answerPoint.setCry_jun(message.getQuestionType().getCryPoint());
-                answerPoint.setOhtani_jun(message.getQuestionType().getOhtaniPoint());
-                answerPoint.setWomanGorori(message.getQuestionType().getWomanGororiPoint());
-                answerPoint.setMokou(message.getQuestionType().getMokouPoint());
-                answerPoint.setGorori(message.getQuestionType().getGororiPoint());
+//                answerPoint.setCooking_jun(message.getQuestionType().getCookingPoint());
+//                answerPoint.setEmotionLess_jun(message.getQuestionType().getEmotionLessPoint());
+//                answerPoint.setGodChild_jun(message.getQuestionType().getGodChildPoint());
+//                answerPoint.setHighSchool_jun(message.getQuestionType().getHighSchoolPoint());
+//                answerPoint.setSanFrancisco_jun(message.getQuestionType().getSanFranciscoPoint());
+//                answerPoint.setCry_jun(message.getQuestionType().getCryPoint());
+//                answerPoint.setOhtani_jun(message.getQuestionType().getOhtaniPoint());
+//                answerPoint.setWomanGorori(message.getQuestionType().getWomanGororiPoint());
+//                answerPoint.setMokou(message.getQuestionType().getMokouPoint());
+//                answerPoint.setGorori(message.getQuestionType().getGororiPoint());
+
+                answerPoint.setCooking_jun(answerPoint.getCooking_jun() + message.getQuestionType().getCookingPoint());
+                answerPoint.setEmotionLess_jun(answerPoint.getEmotionLess_jun() + message.getQuestionType().getEmotionLessPoint());
+                answerPoint.setGodChild_jun(answerPoint.getGodChild_jun() + message.getQuestionType().getGodChildPoint());
+                answerPoint.setHighSchool_jun(answerPoint.getHighSchool_jun() + message.getQuestionType().getHighSchoolPoint());
+                answerPoint.setSanFrancisco_jun(answerPoint.getSanFrancisco_jun() + message.getQuestionType().getSanFranciscoPoint());
+                answerPoint.setCry_jun(answerPoint.getCry_jun() + message.getQuestionType().getCryPoint());
+                answerPoint.setOhtani_jun(answerPoint.getOhtani_jun() + message.getQuestionType().getOhtaniPoint());
+                answerPoint.setWomanGorori(answerPoint.getWomanGorori() + message.getQuestionType().getWomanGororiPoint());
+                answerPoint.setMokou(answerPoint.getMokou() + message.getQuestionType().getMokouPoint());
+                answerPoint.setGorori(answerPoint.getGorori() + message.getQuestionType().getGororiPoint());
 
                 resultPointView.setText(String.format(Locale.US,
                         "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
@@ -83,6 +94,6 @@ public class AnswerScreenActivity extends AppCompatActivity {
     //
     private QuestionType generateRandomQuestion(){
       Random r = new Random();
-      return QuestionType.toQuestionNo(r.nextInt(10));
+      return QuestionType.toQuestionNo(r.nextInt(40));
     }
 }
