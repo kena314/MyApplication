@@ -9,6 +9,7 @@ package com.example.myapplication;
         import android.widget.Button;
         import android.widget.TextView;
 
+        import com.example.myapplication.Data.AnswerPointData;
         import com.example.myapplication.Enum.QuestionType;
         import com.example.myapplication.Data.AnswerPoint;
         import com.example.myapplication.Data.QuestionData;
@@ -62,7 +63,8 @@ public class AnswerScreenActivity extends AppCompatActivity {
 //                answerPoint.setMokou(message.getQuestionType().getMokouPoint());
 //                answerPoint.setGorori(message.getQuestionType().getGororiPoint());
 
-                answerPoint.setCooking_jun(answerPoint.getCooking_jun() + message.getQuestionType().getCookingPoint());
+                //answerPoint.setCooking_jun(answerPoint.getCooking_jun() + message.getQuestionType().getCookingPoint());
+                answerPoint.setCooking_jun(new AnswerPointData());
                 answerPoint.setEmotionLess_jun(answerPoint.getEmotionLess_jun() + message.getQuestionType().getEmotionLessPoint());
                 answerPoint.setGodChild_jun(answerPoint.getGodChild_jun() + message.getQuestionType().getGodChildPoint());
                 answerPoint.setHighSchool_jun(answerPoint.getHighSchool_jun() + message.getQuestionType().getHighSchoolPoint());
