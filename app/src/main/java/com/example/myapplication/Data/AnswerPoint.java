@@ -3,7 +3,6 @@ package com.example.myapplication.Data;
 import lombok.Data;
 
 @Data
-
 public class AnswerPoint {
 
     //料理王純一

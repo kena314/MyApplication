@@ -13,6 +13,7 @@ package com.example.myapplication;
         import com.example.myapplication.Data.AnswerPoint;
         import com.example.myapplication.Data.QuestionData;
 
+        import java.util.Arrays;
         import java.util.Locale;
         import java.util.Random;
 
@@ -86,6 +87,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
+                    // 最後の質問
                     message.setQuestionType();
                 } else {
                     message.setQuestionType(generateRandomQuestion());
@@ -113,5 +115,10 @@ public class AnswerScreenActivity extends AppCompatActivity {
     private QuestionType generateRandomQuestion(){
       Random r = new Random();
       return QuestionType.toQuestionNo(r.nextInt(30) + 10);
+    }
+
+    private QuestionType getKakusinQuestion(AnswerPoint answerPoint){
+
+        return
     }
 }
