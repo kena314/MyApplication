@@ -80,13 +80,17 @@ public class AnswerScreenActivity extends AppCompatActivity {
                         answerPoint.getGorori()));
 
                 answerCount++;
-                message.setQuestionType(generateRandomQuestion());
-                textView.setText(message.getQuestionType().getQuestion());
+
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
                     startActivity(intent);
+                } else if (questionCount - 1 == answerCount){
+                    message.setQuestionType();
+                } else {
+                    message.setQuestionType(generateRandomQuestion());
                 }
+                textView.setText(message.getQuestionType().getQuestion());
             }
         });
 
@@ -108,6 +112,6 @@ public class AnswerScreenActivity extends AppCompatActivity {
     //
     private QuestionType generateRandomQuestion(){
       Random r = new Random();
-      return QuestionType.toQuestionNo(r.nextInt(40));
+      return QuestionType.toQuestionNo(r.nextInt(30) + 10);
     }
 }
