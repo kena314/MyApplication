@@ -28,7 +28,21 @@ public class AnswerPoint {
     //ガチゴロリ
     private AnswerPointData gorori;
 
-    public void test(QuestionType point){
+    public AnswerPoint () {
+        cooking_jun = new AnswerPointData(0,QuestionType.BUNBUN);
+        emotionLess_jun = new AnswerPointData(0,QuestionType.EMOTION_LESS);
+        godChild_jun = new AnswerPointData(0,QuestionType.FUTURE_HOPE);
+        highSchool_jun = new AnswerPointData(0,QuestionType.BLACK_POOP);
+        sanFrancisco_jun = new AnswerPointData(0,QuestionType.ECSTASY);
+        cry_jun = new AnswerPointData(0,QuestionType.CLANNAD_LIFE);
+        ohtani_jun = new AnswerPointData(0,QuestionType.OHTANI);
+        womanGorori = new AnswerPointData(0,QuestionType.WOMAN_GORORI);
+        mokou = new AnswerPointData(0,QuestionType.MOKOU);
+        gorori = new AnswerPointData(0,QuestionType.GORORI);
+
+    }
+
+    public void addPoint(QuestionType point){
         this.cooking_jun.setPoint(this.getCooking_jun().getPoint() + point.getCookingPoint());
         this.emotionLess_jun.setPoint(this.getEmotionLess_jun().getPoint() + point.getEmotionLessPoint());
         this.godChild_jun.setPoint(this.getGodChild_jun().getPoint() + point.getGodChildPoint());
