@@ -25,7 +25,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
     AnswerPoint answerPoint = new AnswerPoint();
     // 質問回数
     Random rnd = new Random();
-    Integer questionCount = 30;//11 + rnd.nextInt(10);
+    Integer questionCount = 11 + rnd.nextInt(10);
     // 回答回数
     int answerCount = 0;
 
