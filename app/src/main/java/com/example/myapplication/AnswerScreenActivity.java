@@ -86,7 +86,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
                     // 最後の質問
-//                    message.setQuestionType();
+                    message.setQuestionType(getKakusinQuestion(answerPoint));
                 } else {
                     message.setQuestionType(generateRandomQuestion());
                 }
@@ -129,8 +129,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
       return QuestionType.toQuestionNo(questionNo);
     }
 
-//    private QuestionType getKakusinQuestion(AnswerPoint answerPoint)
-//
-//        return
-//    }
+    public QuestionType getKakusinQuestion(AnswerPoint answerPoint){
+        return answerPoint.serchSaidai().getKakusinQuestionType();
+    }
 }
