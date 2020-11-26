@@ -2,7 +2,12 @@ package com.example.myapplication.Data;
 
 import com.example.myapplication.Enum.QuestionType;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 public class AnswerPoint {
@@ -53,5 +58,21 @@ public class AnswerPoint {
         this.womanGorori.setPoint(this.getWomanGorori().getPoint() + point.getWomanGororiPoint());
         this.mokou.setPoint(this.getMokou().getPoint() + point.getMokouPoint());
         this.gorori.setPoint(this.getGorori().getPoint() + point.getGororiPoint());
+    }
+
+    public AnswerPointData serchSaidai(){
+        List<AnswerPointData> list = new ArrayList<>();
+        list.add(this.cooking_jun);
+        list.add(this.emotionLess_jun);
+        list.add(this.godChild_jun);
+        list.add(this.highSchool_jun);
+        list.add(this.sanFrancisco_jun);
+        list.add(this.cry_jun);
+        list.add(this.ohtani_jun);
+        list.add(this.womanGorori);
+        list.add(this.mokou);
+        list.add(this.gorori);
+
+        return list.stream().max(Comparator.comparing(AnswerPointData::getPoint)).orElse(this.cooking_jun);
     }
 }
