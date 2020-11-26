@@ -14,6 +14,7 @@ package com.example.myapplication;
         import com.example.myapplication.Data.AnswerPoint;
         import com.example.myapplication.Data.QuestionData;
 
+        import java.util.ArrayList;
         import java.util.Arrays;
         import java.util.Locale;
         import java.util.Random;
@@ -24,9 +25,11 @@ public class AnswerScreenActivity extends AppCompatActivity {
     AnswerPoint answerPoint = new AnswerPoint();
     // 質問回数
     Random rnd = new Random();
-    Integer questionCount = 11 + rnd.nextInt(10);
+    Integer questionCount = 30;//11 + rnd.nextInt(10);
     // 回答回数
     int answerCount = 0;
+
+    ArrayList<Integer> questionList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +112,21 @@ public class AnswerScreenActivity extends AppCompatActivity {
     //
     private QuestionType generateRandomQuestion(){
       Random r = new Random();
-      return QuestionType.toQuestionNo(r.nextInt(30) + 10);
+      int questionNo;
+
+      questionNo = r.nextInt(30) + 10;
+
+      for(int count = 0 ; count <= questionList.size() - 1 ; count++) {
+          //同じ質問の場合は再抽選
+          if (questionList.get(count) == questionNo){
+              questionNo = r.nextInt(30) + 10;
+              count = -1;
+          }
+      }
+
+      questionList.add(questionNo);
+
+      return QuestionType.toQuestionNo(questionNo);
     }
 
 //    private QuestionType getKakusinQuestion(AnswerPoint answerPoint)
