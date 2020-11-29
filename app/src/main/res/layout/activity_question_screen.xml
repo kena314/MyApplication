@@ -20,18 +20,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/back_button"
-        android:layout_width="78dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="372dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="@string/back_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/no_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

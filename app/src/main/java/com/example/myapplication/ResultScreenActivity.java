@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.Data.AnswerPointData;
@@ -18,5 +19,7 @@ public class ResultScreenActivity extends AppCompatActivity {
         AnswerPointData Ap = (AnswerPointData)getIntent().getSerializableExtra("Result");
         TextView textView = findViewById(R.id.result_text);
         textView.setText(Ap.getResultText());
+        ImageView imageView = findViewById(R.id.result_image);
+        imageView.setImageResource(Ap.getImageId());
     }
 }

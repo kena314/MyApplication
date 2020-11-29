@@ -14,5 +14,6 @@ public class AnswerPointData implements Serializable {
     private int point;
     private String resultText;
     private QuestionType kakusinQuestionType;
+    private int imageId;
 
 }
