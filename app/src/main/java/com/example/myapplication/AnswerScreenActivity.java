@@ -70,7 +70,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
-                    intent.putExtra("Result",getKakusinQuestion(answerPoint));
+                    intent.putExtra("Result", getMaxPointData(answerPoint));
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
                     // 最後の質問
@@ -102,7 +102,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
-                    intent.putExtra("Result",getKakusinQuestion(answerPoint));
+                    intent.putExtra("Result",getMaxPointData(answerPoint));
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
                     // 最後の質問
@@ -136,5 +136,9 @@ public class AnswerScreenActivity extends AppCompatActivity {
 
     public QuestionType getKakusinQuestion(AnswerPoint answerPoint){
         return answerPoint.serchSaidai().getKakusinQuestionType();
+    }
+
+    private AnswerPointData getMaxPointData(AnswerPoint answerPoint){
+        return answerPoint.serchSaidai();
     }
 }
