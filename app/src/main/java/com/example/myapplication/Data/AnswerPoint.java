@@ -60,6 +60,19 @@ public class AnswerPoint {
         this.gorori.setPoint(this.getGorori().getPoint() + point.getGororiPoint());
     }
 
+    public void minusPoint(QuestionType point){
+        this.cooking_jun.setPoint(this.getCooking_jun().getPoint() - point.getCookingPoint());
+        this.emotionLess_jun.setPoint(this.getEmotionLess_jun().getPoint() - point.getEmotionLessPoint());
+        this.godChild_jun.setPoint(this.getGodChild_jun().getPoint() - point.getGodChildPoint());
+        this.highSchool_jun.setPoint(this.getHighSchool_jun().getPoint() - point.getHighSchoolPoint());
+        this.sanFrancisco_jun.setPoint(this.getSanFrancisco_jun().getPoint() - point.getSanFranciscoPoint());
+        this.cry_jun.setPoint(this.getCry_jun().getPoint() - point.getCryPoint());
+        this.ohtani_jun.setPoint(this.getOhtani_jun().getPoint() - point.getOhtaniPoint());
+        this.womanGorori.setPoint(this.getWomanGorori().getPoint() - point.getWomanGororiPoint());
+        this.mokou.setPoint(this.getMokou().getPoint() - point.getMokouPoint());
+        this.gorori.setPoint(this.getGorori().getPoint() - point.getGororiPoint());
+    }
+
     public AnswerPointData serchSaidai(){
         List<AnswerPointData> list = new ArrayList<>();
         list.add(this.cooking_jun);
