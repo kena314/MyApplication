@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class AnswerPointData {
     private int point;
+    private String resultText;
     private QuestionType kakusinQuestionType;
 
 }

@@ -70,6 +70,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
+                    intent.putExtra("Result",getKakusinQuestion(answerPoint));
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
                     // 最後の質問
@@ -101,6 +102,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 if (questionCount == answerCount){
                     // 画面を遷移させる
                     Intent intent = new Intent(AnswerScreenActivity.this, ResultScreenActivity.class);
+                    intent.putExtra("Result",getKakusinQuestion(answerPoint));
                     startActivity(intent);
                 } else if (questionCount - 1 == answerCount){
                     // 最後の質問

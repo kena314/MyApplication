@@ -34,16 +34,16 @@ public class AnswerPoint {
     private AnswerPointData gorori;
 
     public AnswerPoint () {
-        cooking_jun = new AnswerPointData(0,QuestionType.BUNBUN);
-        emotionLess_jun = new AnswerPointData(0,QuestionType.EMOTION_LESS);
-        godChild_jun = new AnswerPointData(0,QuestionType.FUTURE_HOPE);
-        highSchool_jun = new AnswerPointData(0,QuestionType.BLACK_POOP);
-        sanFrancisco_jun = new AnswerPointData(0,QuestionType.ECSTASY);
-        cry_jun = new AnswerPointData(0,QuestionType.CLANNAD_LIFE);
-        ohtani_jun = new AnswerPointData(0,QuestionType.OHTANI);
-        womanGorori = new AnswerPointData(0,QuestionType.WOMAN_GORORI);
-        mokou = new AnswerPointData(0,QuestionType.MOKOU);
-        gorori = new AnswerPointData(0,QuestionType.GORORI);
+        cooking_jun = new AnswerPointData(0,"料理王純一",QuestionType.BUNBUN);
+        emotionLess_jun = new AnswerPointData(0,"無感情純一",QuestionType.EMOTION_LESS);
+        godChild_jun = new AnswerPointData(0,"神童純一",QuestionType.FUTURE_HOPE);
+        highSchool_jun = new AnswerPointData(0,"高校生純一",QuestionType.BLACK_POOP);
+        sanFrancisco_jun = new AnswerPointData(0,"サンフランシスコで昇天する純一",QuestionType.ECSTASY);
+        cry_jun = new AnswerPointData(0,"クラナド号泣純一",QuestionType.CLANNAD_LIFE);
+        ohtani_jun = new AnswerPointData(0,"大谷純一",QuestionType.OHTANI);
+        womanGorori = new AnswerPointData(0,"元カノゴロリ",QuestionType.WOMAN_GORORI);
+        mokou = new AnswerPointData(0,"もこう",QuestionType.MOKOU);
+        gorori = new AnswerPointData(0,"ガチゴロリ",QuestionType.GORORI);
 
     }
 
