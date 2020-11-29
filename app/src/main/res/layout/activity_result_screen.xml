@@ -54,7 +54,7 @@
         android:id="@+id/result_image"
         android:layout_width="337dp"
         android:layout_height="359dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
