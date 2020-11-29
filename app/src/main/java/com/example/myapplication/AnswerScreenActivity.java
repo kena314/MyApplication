@@ -14,6 +14,7 @@ package com.example.myapplication;
         import com.example.myapplication.Data.AnswerPoint;
         import com.example.myapplication.Data.QuestionData;
 
+        import java.io.Serializable;
         import java.util.ArrayList;
         import java.util.Arrays;
         import java.util.Locale;
