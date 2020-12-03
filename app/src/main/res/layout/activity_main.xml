@@ -35,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/normal" />
+        app:srcCompat="@drawable/normal"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/imageView3"
