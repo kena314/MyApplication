@@ -10,12 +10,11 @@
         android:id="@+id/result_point_view"
         android:layout_width="361dp"
         android:layout_height="161dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="468dp"
         android:gravity="center"
         android:text="質問"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,5 +52,13 @@
         android:text="@string/yes_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="234dp"
+        android:layout_height="461dp"
+        app:srcCompat="@drawable/majin"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="68dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
