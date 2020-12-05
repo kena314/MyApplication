@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,5 +23,22 @@ public class ResultScreenActivity extends AppCompatActivity {
         textView.setText(Ap.getResultText());
         ImageView imageView = findViewById(R.id.result_image);
         imageView.setImageResource(Ap.getImageId());
+
+
+        Button btn = findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                // Intentを作成する
+                Intent intent = new Intent(ResultScreenActivity.this, StartScreenActivity.class);
+
+                // 画面を遷移させる
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 }

@@ -10,9 +10,9 @@
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="380dp"
-        android:text="@string/start_button"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/start_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,8 +20,8 @@
         android:id="@+id/end_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="452dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="568dp"
         android:text="@string/end_button"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +34,7 @@
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/normal" />
