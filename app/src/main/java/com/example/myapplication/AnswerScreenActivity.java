@@ -43,7 +43,7 @@ public class AnswerScreenActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.question_text);
 
         // テスト用の、現在のポイント表示
-        TextView resultPointView = findViewById(R.id.result_point_view);
+        //TextView resultPointView = findViewById(R.id.result_point_view);
 
         // TextViewにテキストを設定する
         textView.setText(message.getQuestionType().getQuestion());
@@ -56,12 +56,12 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 answerPoint.addPoint(message.getQuestionType());
 
                 //ポイント見る(テスト)
-                resultPointView.setText(String.format(Locale.US,
-                        "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
-                        answerPoint.getCooking_jun().getPoint(),answerPoint.getEmotionLess_jun().getPoint(),answerPoint.getGodChild_jun().getPoint(),
-                        answerPoint.getHighSchool_jun().getPoint(),answerPoint.getSanFrancisco_jun().getPoint(),answerPoint.getCry_jun().getPoint(),
-                        answerPoint.getOhtani_jun().getPoint(),answerPoint.getWomanGorori().getPoint(),answerPoint.getMokou().getPoint(),
-                        answerPoint.getGorori().getPoint()));
+//                resultPointView.setText(String.format(Locale.US,
+//                        "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
+//                        answerPoint.getCooking_jun().getPoint(),answerPoint.getEmotionLess_jun().getPoint(),answerPoint.getGodChild_jun().getPoint(),
+//                        answerPoint.getHighSchool_jun().getPoint(),answerPoint.getSanFrancisco_jun().getPoint(),answerPoint.getCry_jun().getPoint(),
+//                        answerPoint.getOhtani_jun().getPoint(),answerPoint.getWomanGorori().getPoint(),answerPoint.getMokou().getPoint(),
+//                        answerPoint.getGorori().getPoint()));
 
                 answerCount++;
 
@@ -88,12 +88,12 @@ public class AnswerScreenActivity extends AppCompatActivity {
                 answerPoint.minusPoint(message.getQuestionType());
 
                 //ポイント見る(テスト)
-                resultPointView.setText(String.format(Locale.US,
-                        "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
-                        answerPoint.getCooking_jun().getPoint(),answerPoint.getEmotionLess_jun().getPoint(),answerPoint.getGodChild_jun().getPoint(),
-                        answerPoint.getHighSchool_jun().getPoint(),answerPoint.getSanFrancisco_jun().getPoint(),answerPoint.getCry_jun().getPoint(),
-                        answerPoint.getOhtani_jun().getPoint(),answerPoint.getWomanGorori().getPoint(),answerPoint.getMokou().getPoint(),
-                        answerPoint.getGorori().getPoint()));
+//                resultPointView.setText(String.format(Locale.US,
+//                        "料理王=%d,無感情=%d,\n神童=%d,高校生=%d,\nサンフランシスコ=%d,号泣=%d,\n大谷=%d,元カノゴロリ=%d,\nもこう=%d,ガチゴロリ=%d\n",
+//                        answerPoint.getCooking_jun().getPoint(),answerPoint.getEmotionLess_jun().getPoint(),answerPoint.getGodChild_jun().getPoint(),
+//                        answerPoint.getHighSchool_jun().getPoint(),answerPoint.getSanFrancisco_jun().getPoint(),answerPoint.getCry_jun().getPoint(),
+//                        answerPoint.getOhtani_jun().getPoint(),answerPoint.getWomanGorori().getPoint(),answerPoint.getMokou().getPoint(),
+//                        answerPoint.getGorori().getPoint()));
 
                 answerCount++;
 
